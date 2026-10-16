@@ -1,4 +1,4 @@
-﻿# Plataforma de predicción de riesgo de ACV - Operaciones de Aprendizaje Automático II (CEIA – FIUBA)
+﻿# Plataforma de predicción de riesgo de ACV - Operaciones de Aprendizaje Automático II (MIA – FIUBA)
 
 Autora: Cecilia Villanueva · azulvillanueva@gmail.com
 
