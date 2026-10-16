@@ -1,0 +1,101 @@
+{
+  "model_name": "stroke_prediction_model_prod",
+  "model_version": 1,
+  "model_type": "RandomForestClassifier",
+  "model_params": {
+    "n_estimators": 20,
+    "criterion": "log_loss",
+    "max_depth": 50,
+    "random_state": 42
+  },
+  "categorical_columns": [
+    "is_Female",
+    "is_Male",
+    "ever_married_Yes",
+    "is_Govt_job",
+    "is_Never_worked",
+    "is_Private",
+    "is_Self-employed",
+    "Residence_type_Urban",
+    "is_formerly smoked",
+    "is_never smoked",
+    "is_smokes"
+  ],
+  "columns_after_dummy": [
+    "age",
+    "hypertension",
+    "heart_disease",
+    "avg_glucose_level",
+    "bmi",
+    "is_Female",
+    "is_Male",
+    "ever_married_Yes",
+    "is_Govt_job",
+    "is_Never_worked",
+    "is_Private",
+    "is_Self-employed",
+    "Residence_type_Urban",
+    "is_formerly smoked",
+    "is_never smoked",
+    "is_smokes"
+  ],
+  "non_categorical_columns": [
+    "age",
+    "hypertension",
+    "heart_disease",
+    "avg_glucose_level",
+    "bmi"
+  ],
+  "to_drop_map": {
+    "gender": "Other",
+    "ever_married": "No",
+    "work_type": "children",
+    "Residence_type": "Rural",
+    "smoking_status": "Unknown"
+  },
+  "target_col": "stroke",
+  "standard_scaler_mean": [
+    55.32785032468339,
+    0.0855085508550855,
+    0.05091937765205092,
+    118.8363911198142,
+    29.35513064591781,
+    0.674038832454674,
+    0.546997556898547,
+    0.8150957952938152,
+    0.18709013758518708,
+    0.0016715957310016716,
+    0.6907547897646907,
+    0.29304359007329306,
+    0.6395782435386396,
+    0.3307187861643307,
+    0.4555741288414556,
+    0.21332133213321333
+  ],
+  "standard_scaler_std": [
+    22.119106754391556,
+    0.2796369764279194,
+    0.21983310631380965,
+    55.06426849392263,
+    6.625664393511981,
+    0.46873285013727584,
+    0.4977863293076336,
+    0.38821983435697627,
+    0.3899838689017057,
+    0.04085096692507741,
+    0.4621824425287363,
+    0.45515826301435947,
+    0.4801228113000549,
+    0.470471965841029,
+    0.4980224311934196,
+    0.4096527082665567
+  ],
+  "metrics": {
+    "accuracy": 0.9660668380462725,
+    "precision": 0.9758403361344538,
+    "recall": 0.9557613168724279,
+    "f1_score": 0.9656964656964657,
+    "train_observations": 7777,
+    "test_observations": 1945
+  }
+}

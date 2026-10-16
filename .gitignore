@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+auditoria.jsonl
+certs/
+mlflow_tp6.db

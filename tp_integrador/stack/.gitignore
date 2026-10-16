@@ -1,0 +1,11 @@
+﻿.venv
+*.pth
+
+# python
+__pycache__
+
+# airflow
+airflow/logs/*
+!airflow/logs/.gitkeep
+
+# El dataset (322 KB) y su zip SI se versionan: el DAG ETL los descarga del servidor local de la demo.

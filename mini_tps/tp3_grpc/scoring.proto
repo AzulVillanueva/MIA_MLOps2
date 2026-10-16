@@ -1,0 +1,33 @@
+
+syntax = "proto3";
+package scoring;
+
+message StrokeFeatures {
+  string gender = 1;
+  double age = 2;
+  int32 hypertension = 3;
+  int32 heart_disease = 4;
+  string ever_married = 5;
+  string work_type = 6;
+  string residence_type = 7;
+  double avg_glucose_level = 8;
+  double bmi = 9;
+  string smoking_status = 10;
+}
+
+message StrokeBatch {
+  repeated StrokeFeatures items = 1;
+}
+
+message Prediction {
+  bool stroke_predicted = 1;
+  string label = 2;
+  double probability = 3;
+  string model_name = 4;
+  int32 model_version = 5;
+}
+
+service Scoring {
+  rpc Predict(StrokeFeatures) returns (Prediction);
+  rpc PredictBatch(StrokeBatch) returns (stream Prediction);
+}
